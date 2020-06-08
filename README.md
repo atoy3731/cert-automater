@@ -15,16 +15,16 @@ This project is designed to automate creating a local CA, server certificate, an
 
 2. Create a local directory to store the generated certificates outside of the ephemeral Docker container and update the `docker-compose.yaml` to map it into the container at `/certs`. For instance, run:
 
-```
-mkdir ~/test-certs
-```
+    ```
+    mkdir ~/test-certs
+    ```
 
-And update your `docker-compose.yaml` with:
+    And update your `docker-compose.yaml` with:
 
-```
-volumes:
-  - ~/test-certs:/certs
-```
+    ```
+    volumes:
+      - ~/test-certs:/certs
+    ```
 
 3. Run `docker-compose up` to generate certificates.
 
