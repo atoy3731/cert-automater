@@ -1,0 +1,13 @@
+version: "2"
+services:
+  cert-automater:
+    container_name: cert-automater
+    hostname: cert-automater
+    image: atoy3731/cert-automater:1.0
+    environment:
+      - CERT_PASSWORD=password
+      - DOMAIN=example.com
+      - USERNAME=john.doe
+      - USER_EMAIL=john.doe@example.com
+    volumes:
+      - ~/certs:/certs
