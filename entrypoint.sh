@@ -5,6 +5,12 @@ mkdir -p /certs/ca
 mkdir -p /certs/server
 mkdir -p /certs/user
 
+# Clean
+rm -f /etc/pki/CA/index.txt /etc/pki/CA/serial
+mkdir -p /etc/pki/CA
+touch /etc/pki/CA/index.txt
+echo 01 > /etc/pki/CA/serial
+
 echo "Creating Certificate Authority (CA) cert/key in '/certs/ca'.."
 openssl genrsa -des3 -passout pass:$CERT_PASSWORD -out /certs/ca/cacert.key 2048
 openssl req -x509 -new -nodes -passin pass:$CERT_PASSWORD -key /certs/ca/cacert.key -sha256 -days 1825 -out /certs/ca/cacert.pem -config /opt/openssl.cnf -subj "/CN=ca"

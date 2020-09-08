@@ -4,10 +4,11 @@ services:
     container_name: cert-automater
     hostname: cert-automater
     image: atoy3731/cert-automater:1.0
+#    command: bash -c "while true; do echo hello; sleep 2; done"
     environment:
       - CERT_PASSWORD=password
-      - DOMAIN=example.com
-      - USERNAME=john.doe
-      - USER_EMAIL=john.doe@example.com
+      - DOMAIN=cia.ic.gov.demo
+      - USERNAME=admin
+      - USER_EMAIL=admin@rancherfederal.com
     volumes:
       - ~/certs:/certs
