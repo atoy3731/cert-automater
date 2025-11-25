@@ -1,3 +1,5 @@
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/atoy3731/cert-automater/badge)](https://scorecard.dev/viewer/?uri=github.com/atoy3731/cert-automater)
+
 # Cert automater
 
 This project is designed to automate creating a local CA, server certificate, and user certificate for testing. This *NOT* for production.
